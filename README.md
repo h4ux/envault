@@ -1,2 +1,50 @@
-# envault
+```
+                                    __   __   
+    ____   _______  _______   __ __|  |_/  |_ 
+  _/ __ \ /    \  \/ /\__  \ |  |  \  |\   __\
+  \  ___/|   |  \   /  / __ \|  |  /  |_|  |  
+    \___  >___|  /\_/  (____  /____/|____/__|  
+           \/     \/           \/              
+ 
+``` 
+
+
+![Release](https://github.com/h4ux/envault/actions/workflows/release.yml/badge.svg)
+[![Linux](https://svgshare.com/i/Zhy.svg)](https://svgshare.com/i/Zhy.svg)
+[![macOS](https://svgshare.com/i/ZjP.svg)](https://svgshare.com/i/ZjP.svg)
+
 envualt is a cli tool for injecting env variables from hashicorp vault kv storage securly
+
+Ex:
+
+```
+  -configure
+        create configuration for the vault to be used
+  -d    envault debug (verbose)
+  -list string
+        List key value secrets
+  -run
+        set env variables and run command after double dash Ex. envault run -- npm run dev
+  -set string
+        Set key value secret Ex: envault -set=KEY=VALUE
+  -status
+        Get vault status
+  -v    envault version
+```
+
+## Installation via install.sh
+
+```bash
+# binary will be in $(go env GOPATH)/bin/envault
+curl -sSfL https://raw.githubusercontent.com/h4ux/envault/main/install.sh | sh -s -- -b $(go env GOPATH)/bin
+
+# defualt installation into ./bin/
+curl -sSfL https://raw.githubusercontent.com/h4ux/envault/main/install.sh | sh -s
+
+```
+
+Once you run envault -configure envault will create .env file in ~/.config/envault/.env
+
+### Help
+
+** Currently supports Mac OS and Linux OS (Windows can be added with very little effort)
