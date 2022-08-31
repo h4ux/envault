@@ -13,6 +13,8 @@
 [![Linux](https://svgshare.com/i/Zhy.svg)](https://svgshare.com/i/Zhy.svg)
 [![macOS](https://svgshare.com/i/ZjP.svg)](https://svgshare.com/i/ZjP.svg)
 
+![envault](https://user-images.githubusercontent.com/77572830/187724006-91ccf9f7-52b3-4f6d-8a91-015bf7d6e5dd.svg)
+
 envualt is a cli tool for injecting env variables from hashicorp vault kv storage securly
 
 Ex:
