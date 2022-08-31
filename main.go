@@ -3,7 +3,6 @@ package main
 import (
 	"bufio"
 	"encoding/json"
-	"errors"
 	"flag"
 	"fmt"
 	"log"
@@ -57,7 +56,8 @@ func isCommandAvailable(name string) bool {
 }
 
 func createFile(path string, name string, content string) {
-	if _, err := os.Stat(path); errors.Is(err, os.ErrNotExist) {
+
+	if _, err := os.Stat(path); os.IsNotExist(err) {
 		err := os.Mkdir(path, os.ModePerm)
 		if err != nil {
 			log.Println(err)
