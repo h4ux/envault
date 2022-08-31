@@ -56,17 +56,6 @@ func isCommandAvailable(name string) bool {
 	return true
 }
 
-func addToFile(name string, content string) {
-	f, err := os.OpenFile(name, os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0644)
-	if err != nil {
-		log.Println(err)
-	}
-	defer f.Close()
-	if _, err := f.WriteString(content); err != nil {
-		log.Println(err)
-	}
-}
-
 func createFile(path string, name string, content string) {
 	if _, err := os.Stat(path); errors.Is(err, os.ErrNotExist) {
 		err := os.Mkdir(path, os.ModePerm)

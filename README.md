@@ -21,7 +21,7 @@ Ex:
   -configure
         create configuration for the vault to be used
   -d    envault debug (verbose)
-  -list string
+  -list string {json, table, yaml}
         List key value secrets
   -run
         set env variables and run command after double dash Ex. envault run -- npm run dev
